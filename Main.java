@@ -10,13 +10,16 @@ public class Main {
         Feeder c = new Feeder(0);
         System.out.println(c.simulateManyDays(5, 10) + ", " + c.getCurrentFood());
 
-        Feeder d = new Feeder(1200);
-        System.out.println(d.simulateManyDays(12, 3) + ", " + d.getCurrentFood());
+        Feeder d = new Feeder(500);
+        d.simulateOneDay(12);
+        System.out.println(d.getCurrentFood());
 
-        Feeder e = new Feeder(700);
-        System.out.println(e.simulateManyDays(5, 6) + ", " + e.getCurrentFood());
+        Feeder e = new Feeder(1000);
+        e.simulateOneDay(22);
+        System.out.println(e.getCurrentFood());
 
-        Feeder f = new Feeder(500);
-        System.out.println(f.simulateManyDays(8, 4) + ", " + f.getCurrentFood());
+        Feeder f = new Feeder(100);
+        f.simulateOneDay(5);
+        System.out.println(f.getCurrentFood());
     }
 }

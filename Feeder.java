@@ -27,7 +27,7 @@ public class Feeder {
             for (int i = 0; i < numBirds; i++) {
                 eaten += (int) (Math.random() * 41) + 10; // Random food per bird (10 to 50)
             }
-            currentFood -= eaten; // Reduce current food by the total eaten
+            currentFood -= eaten*numBirds; // Reduce current food by the total eaten
 
             // Ensure currentFood does not go below zero
             if (currentFood < 0) {
@@ -52,6 +52,7 @@ public class Feeder {
             } else {
                 break; // Stop if no food is left
             }
+            if(currentFood == 0) return days;
         }
         return days; // Return the number of days food was found
     }
